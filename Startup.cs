@@ -26,6 +26,7 @@ namespace IHostedServiceDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<Microsoft.Extensions.Hosting.IHostedService, WriteToFileHostedService>();
+            services.AddTransient<Microsoft.Extensions.Hosting.IHostedService, WriteToFileHostedService2>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
